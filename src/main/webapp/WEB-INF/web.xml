@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/javaee"
+         version="6.0">
+     
+<!-- Tên hiển thị cho ứng dụng -->
+  <display-name>3011</display-name>
+  
+  <!-- Danh sách các file mặc định sẽ được hiển thị nếu không chỉ định tài nguyên cụ thể -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+
+  <!-- Cấu hình các servlet (nếu có) -->
+  <servlet>
+    <servlet-name>GiangVienServlet</servlet-name>
+    <servlet-class>servlet.GiangVienServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GiangVienServlet</servlet-name>
+    <url-pattern>/danhsachgiangvien</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LopHocServlet</servlet-name>
+    <servlet-class>servlet.LopHocServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LopHocServlet</servlet-name>
+    <url-pattern>/danhsachlophoc</url-pattern>
+  </servlet-mapping>
+<servlet>
+    <servlet-name>ChuongTrinhDaoTaoServlet</servlet-name>
+    <servlet-class>servlet.ChuongTrinhDaoTaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChuongTrinhDaoTaoServlet</servlet-name>
+    <url-pattern>/dsachchuongtrinhdaotao</url-pattern>
+  </servlet-mapping>
+  <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>servlet.HomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/index</url-pattern> <!-- URL để truy cập Servlet -->
+    </servlet-mapping>
+</web-app>
